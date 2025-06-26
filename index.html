@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mix Color</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2c5364">
+  <link rel="icon" href="icon-192.png">
+</head>
+<body>
+  <div class="intro">
+    <h1 class="animated-title">Mix Color</h1>
+  </div>
+
+  <div class="app-container">
+    <div class="color-inputs" id="colorInputs">
+      <div class="color-box">
+        <input type="color" value="#ffffff" class="color-picker" />
+        <button class="remove">×</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="addColor">إضافة لون</button>
+      <button id="mixColors">مزج الألوان</button>
+      <button id="reset">إعادة تعيين</button>
+    </div>
+    <div class="controls">
+      <button onclick="reverseMix(prompt('ادخل كود اللون (مثل: #808080):'))">تحليل لون معين</button>
+      <button onclick="pickImageColor()">تحليل لون من صورة</button>
+    </div>
+    <div class="preview-container">
+      <h3>اللون الناتج:</h3>
+      <div id="resultColor" class="result-color"></div>
+      <p id="colorCode"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker Registered'))
+        .catch(err => console.error('❌ Service Worker Error:', err));
+    }
+  </script>
+</body>
+</html>

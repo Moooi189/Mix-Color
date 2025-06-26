@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 0 20px;
+  animation: fadeInDown 2s ease;
+}
+
+.animated-title {
+  font-size: 48px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: scaleIn 1.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.app-container {
+  background-color: #ffffff22;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.color-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.color-picker {
+  flex-grow: 1;
+  margin-right: 10px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls button {
+  background-color: #ff416c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #ff4b2b;
+}
+
+.preview-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result-color {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.4s ease;
+}
